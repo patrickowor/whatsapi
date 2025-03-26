@@ -38,14 +38,14 @@ app.use((req, res, next) => {
         text: JSON.stringify(requestData, null, 2) // Formatting JSON as readable text
     };
 
-    // // Send email
-    // transporter.sendMail(mailOptions, (error, info) => {
-    //     if (error) {
-    //         console.error("Error sending email:", error);
-    //     } else {
-    //         console.log("Email sent:", info.response);
-    //     }
-    // });
+    // Send email
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.error("Error sending email:", error);
+        } else {
+            console.log("Email sent:", info.response);
+        }
+    });
 
     res.sendStatus(200)
     next();
