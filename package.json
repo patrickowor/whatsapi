@@ -1,0 +1,25 @@
+{
+  "name": "whatsapi",
+  "version": "1.0.0",
+  "description": "the whatsap webhook proxy",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickowor/whatsapi.git"
+  },
+  "author": "patrick owor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patrickowor/whatsapi/issues"
+  },
+  "homepage": "https://github.com/patrickowor/whatsapi#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.0"
+  }
+}
