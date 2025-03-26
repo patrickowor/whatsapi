@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware to parse request body
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: "50mb"}));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Nodemailer transporter setup
@@ -24,11 +24,11 @@ app.use((req, res, next) => {
     const requestData = {
         method: req.method,
         url: req.originalUrl,
-        headers: req.headers,
+        // headers: req.headers,
         body: req.body
     };
 
-    console.log("Incoming request:", requestData);
+    // console.log("Incoming request:", requestData);
 
     // Email options
     const mailOptions = {
